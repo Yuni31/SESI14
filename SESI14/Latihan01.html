@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery 01</title>
+</head>
+<body>
+    
+    <h3>JUDUL</h3>
+    <div id="Tampil1">Isi Dari Tampil 1</div>
+    <div class="Tampil1">Isi Dari Class Tampil 1</div>
+
+    <p> ISI PARAGRAPH</p>
+    <div id="LELAHHH">MAU PUSING TAPI INI CUMA TINGGAL NGETIK</div>
+    <div class="CAPEE">CAPEE MIKIRIN KODINGAN TIAP HARI</div>
+    <script src="JQUERY.js"></script>
+    <script>
+        //document.getElementById("Tampil1").innerHTML = "Teks Baru";
+
+        $(document).ready(function(){
+            $("#Tampil1").html("EVALUASI DIRI");
+            $(".Tampil1").html("BELAJAR SEBELUM DIBERI PELAJARAN");
+            $("h3").html("1 KATA BUAT HARI INI");
+            $("P").html("NGGA JADI BILANG TERSERAH SOALNYA NGA ADA JAWABAN");
+        });
+    </script>
+    
+
+
+    
+</body>
+</html>

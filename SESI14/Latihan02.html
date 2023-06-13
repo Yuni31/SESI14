@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JQuery 02</title>
+</head>
+<body>
+    
+    <h3>JUDUL</h3>
+    <div>
+        <button type="button" id="cmd1">HITUNG LUAS PERSEGI</button>
+        <button type="button" id="cmd2">HITUNG LUAS SEGITIGA</button>
+    </div>
+
+    <div class="LUASPERSEGI">
+        <div>
+            Nilai Panjang
+                <input type="number" id="PJ">
+        </div>
+        <div>
+            Nilai Lebar
+                <input type="number" id="LB">
+        </div>
+        <div>
+            <button type="button" id="cHitungPP">Hitung Luas</button>
+        </div>
+    </div>
+    <div class="LUASSEGITIGA">
+        <div>
+            Nilai Alas
+                <input type="number" id="AL">
+        </div>
+        <div>
+            Nilai Tinggi
+                <input type="number" id="TG">
+        </div>
+        <div>
+            <button type="button" id="cHitungS3">Hitung Luas</button>
+        </div>
+    </div>
+    <div class="LUASSEGITIGA"></div>
+    <div class="HASIL"></div>
+
+
+
+
+    <script src="JQUERY.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".LUASPERSEGI").hide();
+            $(".LUASSEGITIGA").hide();
+            $("h3").html("HITUNG LUAS");
+            $
+
+            $("#cmd1").click(function(){;
+                $("h3").html("HITUNG LUAS PERSEGI");
+                $(".LUASSEGITIGA").hide(1000);
+                $(".LUASPERSEGI").show(1000);
+                $(".HASIL").html("");
+            });
+
+            $("#cmd2").click(function(){;
+                $("h3").html("HITUNG LUAS SEGITIGA");
+                $(".LUASPERSEGI").hide(1000);
+                $(".LUASSEGITIGA").show(1000);
+                $(".HASIL").html("");
+            });
+            $("#cHitungPP").click(function(){
+                   //GET DATA
+                   let P = $("#PJ").val();
+                   let L = $("#LB").val();
+                   //PROSES
+                   let LU = P*L;
+                   //OUTPUT
+                   let tx ="HITUNG LUAS PERSEGI DENGAN NILAI PANJANG "+P;
+                   tx +=" DAN LEBAR "+L+" adalah: <br>";
+                   tx += "LUAS = PANJANG X LEBAR<br>";
+                   tx += "= "+P+" X "+L;
+                   tx += "="+ LU;
+                   $(".HASIL").html(tx);
+
+            });
+        });
+
+    </script>
+</body>
+</html>
